@@ -1,4 +1,3 @@
-HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -34,7 +33,6 @@ build/
 
 hs_err_pid*
 /.idea/
-*.iml
 /classworlds/classworlds/
 /commons-codec/commons-codec/1.11/
 /commons-collections/commons-collections/3.2.2/
