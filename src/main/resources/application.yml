@@ -1,0 +1,6 @@
+server:
+  max-http-header-size: 8192
+
+spring:
+  profiles:
+    active: '@profileActive@'
