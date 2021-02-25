@@ -1,27 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- 指定了当前POM模型的版本，对于Maven2及Maven 3来说，它只能是4.0.0 -->
     <modelVersion>4.0.0</modelVersion>
+
+    <!-- 项目公用模块(其实parent我也不太理解是什么意思，但是按照文档上来说，是一个组下多项目公用的配置) -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.4.3</version>
         <relativePath/>
     </parent>
+
+    <!-- 定义项目属于哪个组 -->
     <groupId>com.liang</groupId>
+    <!-- 定义了当前项目在上面那个组中的唯一ID(一个组下面可以有多个项目) -->
     <artifactId>admin</artifactId>
+    <!-- 当前项目的版本 -->
     <version>0.0.1</version>
+    <!-- 当前项目的简称 -->
     <name>admin</name>
+    <!-- 当前项目的描述 -->
     <description>common admin project for Spring Boot</description>
+
+    <!-- 一些特定变量进行声明 -->
     <properties>
+        <!-- 声明：开发此项目使用的java版本 -->
         <java.version>1.8</java.version>
     </properties>
+
+    <!-- 此项目所依赖的jar包(准确的说应该是构建) -->
     <dependencies>
+        <!-- 引入spring boot web包 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- 引入spring boot测试包 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -29,7 +46,9 @@
         </dependency>
     </dependencies>
 
+    <!-- mvn打包的一些配置 -->
     <build>
+        <!-- 引入的插件 -->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -38,6 +57,7 @@
         </plugins>
     </build>
 
+    <!-- 使用profiles定义各环境的配置 -->
     <profiles>
         <profile>
             <!-- 本地开发环境 -->
