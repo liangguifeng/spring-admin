@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- 指定了当前POM模型的版本，对于Maven2及Maven 3来说，它只能是4.0.0 -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 项目公用模块 -->
+    <parent>
+        <groupId>com.liang</groupId>
+        <artifactId>spring-admin</artifactId>
+        <version>0.0.1</version>
+        <relativePath/>
+    </parent>
+
+    <!-- 定义了当前项目在上面那个组中的唯一ID(一个组下面可以有多个项目) -->
+    <artifactId>admin</artifactId>
+    <!-- 当前项目的简称 -->
+    <name>admin</name>
+    <!-- 当前项目的描述 -->
+    <description>后台管理系统</description>
+
+    <!-- 此项目所依赖的jar包 -->
+    <dependencies>
+        <!-- 引入项目配置模块包 -->
+        <dependency>
+            <groupId>com.liang</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+
+        <!-- 引入spring boot websocket包 -->
+        <dependency>
+            <groupId>com.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,10 +1,10 @@
-package com.liang.admin;
+package com.liang.core;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AdminApplicationTests {
+class SpringCoreApplicationTests {
 
     @Test
     void contextLoads() {
