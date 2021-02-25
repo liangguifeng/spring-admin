@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.liang</groupId>
     <artifactId>admin</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>admin</name>
     <description>common admin project for Spring Boot</description>
     <properties>
@@ -38,4 +38,23 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <!-- 本地开发环境 -->
+            <!-- 环境id -->
+            <id>local</id>
+            <!-- 环境名称 -->
+            <properties>
+                <profilesActive>local</profilesActive>
+            </properties>
+            <!--默认开启dev-->
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <!-- 产生的构件的文件名，默认值是${artifactId}-${version}-->
+            <build>
+                <finalName>${project.artifactId}-${project.version}</finalName>
+            </build>
+        </profile>
+    </profiles>
 </project>
