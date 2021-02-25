@@ -10,7 +10,6 @@
         <groupId>com.liang</groupId>
         <artifactId>spring-admin</artifactId>
         <version>0.0.1</version>
-        <relativePath/>
     </parent>
 
     <!-- 定义了当前项目在上面那个组中的唯一ID(一个组下面可以有多个项目) -->
@@ -25,13 +24,7 @@
         <!-- 引入项目配置模块包 -->
         <dependency>
             <groupId>com.liang</groupId>
-            <artifactId>spring-core</artifactId>
-        </dependency>
-
-        <!-- 引入spring boot websocket包 -->
-        <dependency>
-            <groupId>com.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-websocket</artifactId>
+            <artifactId>core</artifactId>
         </dependency>
     </dependencies>
 </project>
