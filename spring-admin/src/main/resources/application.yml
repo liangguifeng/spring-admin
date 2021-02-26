@@ -1,6 +1,6 @@
 server:
+  port: 8090
   max-http-header-size: 8192
-
 spring:
   profiles:
-    active: '@profileActive@'
+    active: '@profilesActive@'

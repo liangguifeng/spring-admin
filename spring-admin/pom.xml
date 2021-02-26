@@ -12,6 +12,9 @@
         <version>0.0.1</version>
     </parent>
 
+    <!-- 打包为jar -->
+    <packaging>jar</packaging>
+
     <!-- 定义了当前项目在上面那个组中的唯一ID(一个组下面可以有多个项目) -->
     <artifactId>admin</artifactId>
     <!-- 当前项目的简称 -->
@@ -27,4 +30,30 @@
             <artifactId>core</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <!-- 解决@xx@无法解析的问题 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimiter>@</delimiter>
+                    </delimiters>
+                    <useDefaultDelimiters>false</useDefaultDelimiters>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.liang.admin.SpringAdminApplication</mainClass>
+                    <layout>JAR</layout>
+                    <!--构建完整可执行程序，可以直接运行-->
+                    <executable>true</executable>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
