@@ -1,3 +1,5 @@
 spring:
   profiles:
     include: [ center-local ]
+logging:
+ path: /var/tmp/spring-admin

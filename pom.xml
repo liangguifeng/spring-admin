@@ -14,7 +14,7 @@
     </parent>
 
     <!-- 定义项目属于哪个组 -->
-        <groupId>com.liang</groupId>
+    <groupId>com.liang</groupId>
     <!-- 定义了当前项目在上面那个组中的唯一ID(一个组下面可以有多个项目) -->
     <artifactId>spring-admin</artifactId>
     <!-- 当前项目的版本 -->
